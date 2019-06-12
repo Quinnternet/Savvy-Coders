@@ -1,10 +1,16 @@
-const dayLabels = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
-const monthLabels = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
-const monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
-const currentDate = new Date();
+export default monthUpdate()
 
-function Calendar(month, year){
-    this.month = (isNaN(month) || month == null) ? currentDate.getMonth() : month;
-    this.year = (isNaN(year) || year == null) ? currentDate.getFullYear() : year;
-    this.html = '';
+const now = new Date(Date.now());
+const longMonth = { month: 'long' };
+
+function monthUpdate() {
+    window.onload = function () {
+        const monthField = document.querySelector('#month');
+        monthField.textContent = new Intl.DateTimeFormat('en-US', longMonth).format(now)
+    }
 }
+
+// TODO: populate calendar cells with proper dates
+// TODO: trigger overlay() when a calendar cell is clicked
+// TODO: make appointments save and persist even when the page is closed
+// TODO: allow for switching of months

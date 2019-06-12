@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Quinnternet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono=swap" rel="stylesheet">
 </head>
 <body>
     <div id="grid-container">
@@ -14,7 +15,7 @@
             <h1>Social Feed</h1>
         </div>
         <div id="rss">
-            <h1>News Feed</h1>
+            <h1>RSS Feed</h1>
         </div>
         <div id="today">
             <h1>Today's Weather</h1>
@@ -156,12 +157,22 @@
                 f7
             </div>
             <div id="month">
-                Month
             </div>
             <div id="day">
-                Day
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
             </div>
         </div>
     </div>
+    <div id="appointmentOverlay">
+        <label for="description">Appointment</label>
+        <input type="text" name="description" id="addAppointment" placeholder="What's the plan?">
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

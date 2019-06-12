@@ -1,0 +1,21 @@
+{
+  "name": "Capstone",
+  "version": "1.0.0",
+  "description": "## Definition of audience The audience for this web app is career coaches, recruiters, teachers, and anyone who wants to have easy access to scheduling, planning, and socializing apps in one page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "navigo": "^7.1.2"
+  }
+}
