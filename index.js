@@ -1,11 +1,8 @@
 // import Appointments from './components/calendar/Appointments'
-import Current from './components/calendar/Current'
+import Fill from './components/calendar/FillCalendar'
 import Month from './components/calendar/Month'
-// import Next from './components/Calendar/Next'
-import Previous from './components/calendar/Previous';
+
 
 // Appointments()
-Current()
+Fill()
 Month()
-// Next()
-// Previous()
