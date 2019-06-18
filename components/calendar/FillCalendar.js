@@ -37,7 +37,7 @@ function fillCalendar() {
     function fillNext() {
         const nextMonth = moment(currentDate).add(1, 'month');
         const nextStartDay = nextMonth.startOf('month').day();
-        for (let i = nextStartDay; i < 11; i++) {
+        for (let i = nextStartDay; i < 14; i++) {
             dateArray.push(i - nextStartDay + 1)
         }
         
@@ -49,9 +49,17 @@ function fillCalendar() {
             calendarCells[i].textContent = dateArray[i];
         }
     }
+    // updates the month header thing
+    function monthUpdate() {
+        const monthField = document.querySelector('#month');
+        monthField.textContent = moment(currentDate).format('MMMM')
+    }
+
     fillCurrent()
     fillPrevious()
     fillNext()
-    console.log(dateArray)
     populate()
+    monthUpdate()
 }
+
+// TODO incorporate Month.js into this file, since y'know
