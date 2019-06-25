@@ -1,6 +1,8 @@
-// import Appointments from './components/calendar/Appointments'
 import Fill from './components/calendar/FillCalendar'
+import Feed from './components/rss/RSS'
+// import Weather from './components/Weather'
 
 
-// Appointments()
 Fill()
+Feed()
+// Weather()

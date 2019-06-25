@@ -23,7 +23,7 @@ body {
     grid-area: appointments;
 }
 
-#calendar, #forecast, #rss, #social, #today, #tonight {
+#calendar, #forecast, #rss, #social, #title, #today, #tonight {
     border: 1px dashed #cfb9f9;
 }
 
@@ -31,8 +31,8 @@ body {
     color: #4a155d;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-    grid-template-areas: "month month month month month month month" "day day day day day day day" "a1 a2 a3 a4 a5 a6 a7" "b1 b2 b3 b4 b5 b6 b7" "c1 c2 c3 c4 c5 c6 c7" "d1 d2 d3 d4 d5 d6 d7" "e1 e2 e3 e4 e5 e6 e7" "f1 f2 f3 f4 f5 f6 f7" "appointments appointments appointments appointments appointments appointments appointments";
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "month month month month month month month" "day day day day day day day" "a1 a2 a3 a4 a5 a6 a7" "b1 b2 b3 b4 b5 b6 b7" "c1 c2 c3 c4 c5 c6 c7" "d1 d2 d3 d4 d5 d6 d7" "e1 e2 e3 e4 e5 e6 e7" "f1 f2 f3 f4 f5 f6 f7";
     grid-area: calendar;
 }
 
@@ -44,6 +44,10 @@ body {
 }
 
 #forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . . . .";
     grid-area: forecast;
 }
 
@@ -51,7 +55,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 10vh 70vh 10vh 10vh;
-    grid-template-areas: "social rss today" "social rss calendar" "social rss tonight" "social rss forecast";
+    grid-template-areas: "title title today" "social rss calendar" "social rss tonight" "social rss forecast";
 }
 
 #month {
@@ -69,11 +73,27 @@ body {
     grid-area: social;
 }
 
+#title {
+    background-image: url("../images/QuinnternetLogo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: title;
+}
+
 #today {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . . . .";
     grid-area: today;
 }
 
 #tonight {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . . . .";
     grid-area: tonight;
 }
 
@@ -296,7 +316,7 @@ body {
 
 @media (min-width: 900px) {
     body {
-        grid-template-areas: "social rss calendar today tonight forecast";
+        grid-template-areas: "title social rss calendar today tonight forecast";
         grid-template-columns: 1fr 5fr;
         grid-template-rows: min-content auto min-content;
     }

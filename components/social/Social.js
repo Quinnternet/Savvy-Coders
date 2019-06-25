@@ -1,0 +1,1 @@
+$("$my-content").load("proxy.php #load-content");

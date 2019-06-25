@@ -11,7 +11,7 @@ let dateArray = []; // fills with dates, populates grid
 
 // does what it says!
 function fillCalendar() {
-    // adds the dates of the current month to dateArray1
+    // adds the dates of the current month to dateArray
     function fillCurrent() {
         for (let i = startDay; i < endDate + startDay; i++) {
             dateArray.push(i - startDay + 1)
@@ -27,7 +27,6 @@ function fillCalendar() {
         for (let i = 0; i < previousEndDate; i++) {
             previousArray.push(i + 1);
         }
-        previousArray.slice(previousEndDate - startDay)
         const toAdd = previousArray.slice(previousEndDate - startDay)
         dateArray = toAdd.concat(dateArray)
     }
@@ -61,5 +60,3 @@ function fillCalendar() {
     populate()
     monthUpdate()
 }
-
-// TODO incorporate Month.js into this file, since y'know

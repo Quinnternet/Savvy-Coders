@@ -8,28 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
 </head>
 <body>
     <div id="grid-container">
         <div id="social">
-            <h1>Social Feed</h1>
+            <object type="text/html" data="http://quinnter.net">
+            </object>
         </div>
         <div id="rss">
-            <h1>RSS Feed</h1>
+            <h2>RSS Reader</h2>
+            <output>Loading...</output>
+            <template>
+                <h2></h2>
+                <h3></h3>
+                <a href='#'></a>
+                <p></p>
+            </template>
+        </div>
+        <div id="title">
         </div>
         <div id="today">
-            <h1>Today's Weather</h1>
+            <h2>Today's Weather</h2>
         </div>
         <div id="tonight">
-            <h1>Tonight's Weather</h1>
+            <h2>Tonight's Weather</h2>
         </div>
         <div id="forecast">
-            <h1>Weekly Forecast</h1>
+            <h2>Weekly Forecast</h2>
         </div>
         <div id="calendar">
-            <div id="appointments">
-                <h1>Appointments</h1>
-            </div>
             <div id="a1" class="cell">
             </div>
             <div id="a2" class="cell">
